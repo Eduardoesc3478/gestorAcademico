@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "c0e371a7-4a56-4d05-a5ca-aa14ff5b328f",
+		"name": "academicManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37642343"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Eduardo\",\r\n    \"surname\": \"Escobar\",\r\n    \"username\":\"EduardoEsc\",\r\n    \"email\": \"Edesc12@gmail.com\",\r\n    \"password\":\"Aa12.qQq\",\r\n    \"phone\":\"12345678\",\r\n    \"role\":\"TEACHER_ROLE\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Edesc12@gmail.com\",\r\n    \"password\":\"Aa12.qQq\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/user/findUser/67a91df0318cdd6b0dfddb57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"user",
+								"findUser",
+								"67a91df0318cdd6b0dfddb57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"EduardoEsc12\",\r\n    \"email\": \"Edesc132@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/user/updateUser/67a91df0318cdd6b0dfddb57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"user",
+								"updateUser",
+								"67a91df0318cdd6b0dfddb57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/user/deleteUser/67a91df0318cdd6b0dfddb57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"user",
+								"deleteUser",
+								"67a91df0318cdd6b0dfddb57"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Crear curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Taller 3\",\r\n    \"description\":\"Curso practico de carrera\",\r\n    \"email\":\"edesc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/course/addCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"course",
+								"addCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/course/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"course",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/course/findCourse/67a83cae8150bec0b9dbc74c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"course",
+								"findCourse",
+								"67a83cae8150bec0b9dbc74c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mate\",\r\n    \"description\": \"Matematicas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/course/updateCourse/67a83cae8150bec0b9dbc74c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"course",
+								"updateCourse",
+								"67a83cae8150bec0b9dbc74c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/academicManager/v1/course/deleteCourse/67a83cae8150bec0b9dbc74c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"academicManager",
+								"v1",
+								"course",
+								"deleteCourse",
+								"67a83cae8150bec0b9dbc74c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
